@@ -21,6 +21,13 @@
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/markdown-mode.el")
 ;(load-library "p4")
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/"))
+(package-initialize)
+
+
+
 (setq-default ispell-program-name "aspell")
 
 
