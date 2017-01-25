@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>INSTALL</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body class="webpage">
+<table class="webpage" border="0" cellpadding="0" cellspacing="0" width="100%" summary="Nav Table Summary">
+<tbody>
+<tr>
+<td width="" valign="top" align="left" bgcolor="#ffffff"><a href="../README.html"><img src="graphics/banner.png" alt="Return to the psgmlx home page" align="left" border="0"></a>
+<br clear="all">
+<br>
+<p class="navtoctitle">Contents</p>
+<p class="navtoc">
+<br>&nbsp;&nbsp;<font><span class="toclevel1"><img src="graphics/closed-arrow.png" alt="+">&nbsp;&nbsp;<a href="install.html">Installation</a></span></font>
+<br>
+<br>&nbsp;&nbsp;<font><span class="toclevel1"><img src="graphics/blank-arrow.png" alt=".">&nbsp;&nbsp;<a href="usage.html">Usage</a></span></font>
+<br>
+<br>&nbsp;&nbsp;<font><span class="toclevel1"><img src="graphics/open-arrow.png" alt="-">&nbsp;&nbsp;<a href="README-file.html">Docs</a></span></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<font size="-1"><span class="navtoc"><img src="graphics/blank-arrow.png" alt=".">&nbsp;&nbsp;<a href="README-file.html">README</a></span></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<font size="-1"><span class="xnavtoc"><img src="graphics/blank-arrow.png" alt="*">&nbsp;&nbsp;INSTALL</span></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<font size="-1"><span class="navtoc"><img src="graphics/blank-arrow.png" alt=".">&nbsp;&nbsp;<a href="ChangeLog-file.html">ChangeLog</a></span></font>
+<br>
+<br>&nbsp;&nbsp;<font><span class="toclevel1"><img src="graphics/closed-arrow.png" alt="+">&nbsp;&nbsp;<a href="blue-screenshot.html">Screenshots</a></span></font>
+<br>
+<br>&nbsp;&nbsp;<font><span class="toclevel1"><img src="graphics/blank-arrow.png" alt=".">&nbsp;&nbsp;<a href="bugs.html">Bugs</a></span></font>
+<br>
+<br>&nbsp;&nbsp;<font><span class="toclevel1"><img src="graphics/blank-arrow.png" alt=".">&nbsp;&nbsp;<a href="packages.html">Packages</a></span></font>
+<br>
+<br>&nbsp;&nbsp;<font><span class="toclevel1"><img src="graphics/blank-arrow.png" alt=".">&nbsp;&nbsp;<a href="http://dulug.duke.edu/~mark/tools/">Download</a></span></font>
+<br>
+</p>
+<br>
+</td><td bgcolor="#ffffff">&nbsp;&nbsp;</td><td align="left" valign="top" bgcolor="#ffffff" height="600" class="content">
+<div id="INSTALL-file" class="webpage">
+<a name="INSTALL-file"></a>
+<div class="sect1">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: all">
+<a name="N3271"></a><span class="title">The INSTALL File</span>
+</h2>
+</div>
+</div>
+      <div class="literallayout">
+<br>
+INSTALL&nbsp;for&nbsp;psgmlx&nbsp;0.3<br>
+$Id: INSTALL-file.html,v 1.1.1.1 2007/04/20 13:10:54 rich Exp $<br>
+<br>
+Installation&nbsp;Instructions:<br>
+<br>
+The&nbsp;main&nbsp;installation&nbsp;tasks&nbsp;are&nbsp;byte-compiling&nbsp;the&nbsp;source&nbsp;files,&nbsp;<br>
+and&nbsp;telling&nbsp;Emacs&nbsp;how&nbsp;to&nbsp;find&nbsp;the&nbsp;installation&nbsp;directory.<br>
+<br>
+You&nbsp;can&nbsp;easily&nbsp;test&nbsp;the&nbsp;package&nbsp;before&nbsp;you&nbsp;decide&nbsp;to&nbsp;edit&nbsp;your&nbsp;.emacs&nbsp;<br>
+file&nbsp;by&nbsp;executing&nbsp;the&nbsp;"test"&nbsp;script.<br>
+<br>
+<br>
+Installation&nbsp;Step&nbsp;I:&nbsp;the&nbsp;"test"&nbsp;script<br>
+==========================================<br>
+<br>
+1.&nbsp;Uncompress&nbsp;the&nbsp;tarball&nbsp;somewhere.&nbsp;Rename&nbsp;it&nbsp;if&nbsp;you&nbsp;want.<br>
+<br>
+2.&nbsp;Change&nbsp;into&nbsp;the&nbsp;psgmlx&nbsp;directory.&nbsp;<br>
+<br>
+3.&nbsp;(a)&nbsp;Installation&nbsp;Via&nbsp;the&nbsp;"test"&nbsp;Script&nbsp;&nbsp;<br>
+<br>
+&nbsp;&nbsp;&nbsp;Execute&nbsp;the&nbsp;"test"&nbsp;script:&nbsp;./test<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;What&nbsp;the&nbsp;test&nbsp;script&nbsp;does:&nbsp;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First,&nbsp;it&nbsp;calls&nbsp;emacs&nbsp;in&nbsp;batch-mode&nbsp;to&nbsp;byte&nbsp;compile&nbsp;most&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;source&nbsp;files.&nbsp;Ignore&nbsp;the&nbsp;warnings.&nbsp;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next,&nbsp;it&nbsp;starts&nbsp;a&nbsp;fresh&nbsp;copy&nbsp;of&nbsp;emacs&nbsp;and&nbsp;loads&nbsp;some&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sample&nbsp;files&nbsp;in&nbsp;new&nbsp;frames&nbsp;with&nbsp;new&nbsp;X&nbsp;resource&nbsp;settings.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Furthermore,&nbsp;each&nbsp;frame&nbsp;displays&nbsp;one&nbsp;of&nbsp;the&nbsp;SGML&nbsp;color&nbsp;themes,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;which&nbsp;are&nbsp;part&nbsp;pf&nbsp;the&nbsp;package..<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Change&nbsp;themes&nbsp;using&nbsp;the&nbsp;"Color&nbsp;Themes"&nbsp;menu&nbsp;under&nbsp;"SGML".<br>
+<br>
+&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;(b)&nbsp;Installation&nbsp;WITHOUT&nbsp;the&nbsp;Script<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;you&nbsp;don't&nbsp;(or&nbsp;can't)&nbsp;run&nbsp;the&nbsp;test&nbsp;script,&nbsp;you&nbsp;can&nbsp;easily&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do&nbsp;the&nbsp;steps&nbsp;by&nbsp;hand.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.&nbsp;&nbsp;CD&nbsp;into&nbsp;the&nbsp;psgmlx&nbsp;directory&nbsp;with&nbsp;your&nbsp;favorite&nbsp;terminal.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.&nbsp;Read&nbsp;the&nbsp;"test"&nbsp;script&nbsp;and&nbsp;do&nbsp;the&nbsp;compilation&nbsp;steps<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;shell&nbsp;commands,&nbsp;or&nbsp;by&nbsp;loading&nbsp;and&nbsp;coompiling&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;files&nbsp;through&nbsp;Emacs.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii.&nbsp;Have&nbsp;emacs&nbsp;load&nbsp;the&nbsp;samples&nbsp;and&nbsp;new&nbsp;X&nbsp;resources,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;skipping&nbsp;your&nbsp;regular&nbsp;.emacs&nbsp;stuff:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"emacs&nbsp;-q&nbsp;-l&nbsp;lib/load-samples.el&nbsp;-xrm&nbsp;'#include&nbsp;"dot-Xresources"'&nbsp;"<br>
+<br>
+<br>
+Additional&nbsp;Steps&nbsp;for&nbsp;Regular&nbsp;Use<br>
+================================<br>
+<br>
+Add&nbsp;psgmlx&nbsp;to&nbsp;Emacs&nbsp;Startup<br>
+---------------------------<br>
+<br>
+4.&nbsp;Tell&nbsp;Emacs&nbsp;how&nbsp;to&nbsp;find&nbsp;psgmlx.&nbsp;Add&nbsp;a&nbsp;snippet&nbsp;to&nbsp;your&nbsp;.emacs:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(setq&nbsp;psgmlxpath&nbsp;"path-to-psgmlx-directory")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(load&nbsp;(concat&nbsp;psgmlxpath&nbsp;"/init"))<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;path&nbsp;should&nbsp;NOT&nbsp;have&nbsp;a&nbsp;trailing&nbsp;slash.<br>
+&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For&nbsp;example,&nbsp;if&nbsp;you&nbsp;untarred&nbsp;it&nbsp;in&nbsp;your&nbsp;home&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;directory&nbsp;and&nbsp;didn't&nbsp;change&nbsp;its&nbsp;name,&nbsp;you'd&nbsp;have<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(setq&nbsp;psgmlxpath&nbsp;"~/psgmlx-0.3")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(load&nbsp;(concat&nbsp;psgmlxpath&nbsp;"/init"))<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;dot-emacs.el&nbsp;file&nbsp;has&nbsp;the&nbsp;same&nbsp;info.<br>
+<br>
+<br>
+Optional:&nbsp;Modify&nbsp;your&nbsp;X&nbsp;Resources<br>
+---------------------------------<br>
+<br>
+5.&nbsp;Add&nbsp;the&nbsp;dot-Xresources&nbsp;stuff&nbsp;to&nbsp;your&nbsp;.Xresources&nbsp;file.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;Run&nbsp;"xrdb&nbsp;~/.Xresources"<br>
+&nbsp;<br>
+<br>
+<br>
+Customization<br>
+-------------<br>
+<br>
+6.&nbsp;Miscellaneous&nbsp;Settings:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;stuff&nbsp;in&nbsp;"misc-settings.el"&nbsp;is&nbsp;loaded&nbsp;in&nbsp;the&nbsp;demo,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but&nbsp;not&nbsp;by&nbsp;default.&nbsp;To&nbsp;always&nbsp;load&nbsp;this&nbsp;file&nbsp;at&nbsp;start-up,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;put&nbsp;the&nbsp;following&nbsp;in&nbsp;your&nbsp;.emacs,&nbsp;BEFORE&nbsp;you&nbsp;load&nbsp;psgmlx-init:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(setq&nbsp;misc-settings&nbsp;t)<br>
+<br>
+7.&nbsp;Windows&nbsp;Keyboard&nbsp;Bindings/Shortcuts<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;you&nbsp;want&nbsp;windows-style&nbsp;CUT,&nbsp;COPY,&nbsp;PASTE,&nbsp;and&nbsp;UNDO&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keyboard&nbsp;commands,&nbsp;put&nbsp;the&nbsp;following&nbsp;in&nbsp;your&nbsp;.emacs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEFORE&nbsp;you&nbsp;load&nbsp;psgmlx-init:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(setq&nbsp;winkeys&nbsp;t)<br>
+<br>
+8.&nbsp;Default&nbsp;Color-Theme<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit&nbsp;"default-color-theme.el"&nbsp;to&nbsp;select&nbsp;what&nbsp;you&nbsp;wamt,&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;put&nbsp;it's&nbsp;content&nbsp;in&nbsp;your&nbsp;.emacs.&nbsp;This&nbsp;stuff&nbsp;must&nbsp;go&nbsp;AFTER<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you&nbsp;load&nbsp;psgmlx-init,&nbsp;when&nbsp;emacs&nbsp;will&nbsp;know&nbsp;where&nbsp;to&nbsp;find&nbsp;things.<br>
+<br>
+<br>
+9.&nbsp;Color-Themes<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;can&nbsp;change&nbsp;color&nbsp;themes&nbsp;at&nbsp;anytime&nbsp;while&nbsp;in&nbsp;sgml-mode&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by&nbsp;choosing&nbsp;a&nbsp;different&nbsp;theme&nbsp;from&nbsp;the&nbsp;"Color&nbsp;Themes"&nbsp;submenu<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;"SGML"&nbsp;menu.&nbsp;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note:&nbsp;Emacs21&nbsp;users&nbsp;will&nbsp;want&nbsp;to&nbsp;make&nbsp;new&nbsp;frames&nbsp;after&nbsp;changing&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;a&nbsp;theme&nbsp;other&nbsp;than&nbsp;the&nbsp;default.&nbsp;The&nbsp;cursor&nbsp;and&nbsp;mouse&nbsp;pointer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;don't&nbsp;update&nbsp;properly.&nbsp;(Could&nbsp;be&nbsp;my&nbsp;fault...)&nbsp;<br>
+<br>
+<br>
+<br>
+SGML&nbsp;Configuration<br>
+------------------<br>
+<br>
+10.&nbsp;If&nbsp;your&nbsp;system&nbsp;uses&nbsp;SGML&nbsp;catalogs,&nbsp;you'll&nbsp;need&nbsp;to&nbsp;tell&nbsp;psgml&nbsp;where<br>
+&nbsp;&nbsp;&nbsp;it&nbsp;can&nbsp;find&nbsp;the&nbsp;main&nbsp;catalog&nbsp;file.&nbsp;(It&nbsp;currently&nbsp;defaults&nbsp;to&nbsp;<br>
+&nbsp;&nbsp;&nbsp;"/usr/lib/sgml/catalog".)&nbsp;It&nbsp;could&nbsp;also&nbsp;be&nbsp;"/etc/sgml/catalog".<br>
+&nbsp;&nbsp;&nbsp;When&nbsp;you&nbsp;find&nbsp;it,&nbsp;put&nbsp;this&nbsp;statement&nbsp;in&nbsp;your&nbsp;.emacs:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(setq&nbsp;sgml-catalog-files&nbsp;"path-to-catalog-file")<br>
+<br>
+&nbsp;&nbsp;&nbsp;Since&nbsp;I've&nbsp;provided&nbsp;the&nbsp;xml&nbsp;declaration&nbsp;(xml.dcl&nbsp;in&nbsp;lib),<br>
+&nbsp;&nbsp;&nbsp;You&nbsp;won't&nbsp;need&nbsp;to&nbsp;set&nbsp;that&nbsp;variable.<br>
+<br>
+<br>
+11.&nbsp;Menu&nbsp;Configuration:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;can&nbsp;customize&nbsp;both&nbsp;of&nbsp;the&nbsp;"Insert&nbsp;DTD"&nbsp;and&nbsp;"Custom&nbsp;Markup"&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menus.&nbsp;The&nbsp;files&nbsp;in&nbsp;the&nbsp;conf/psgml/&nbsp;directory&nbsp;named&nbsp;data-*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;provide&nbsp;examples.<br>
+<br>
+<br>
+12.&nbsp;Until&nbsp;I&nbsp;have&nbsp;time&nbsp;to&nbsp;write&nbsp;better&nbsp;docs,&nbsp;you'll&nbsp;have&nbsp;to&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;peruse&nbsp;the&nbsp;files&nbsp;in&nbsp;the&nbsp;conf&nbsp;directory&nbsp;to&nbsp;do&nbsp;any&nbsp;further&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;customization.&nbsp;You&nbsp;shouldn't&nbsp;have&nbsp;any&nbsp;problems,&nbsp;I&nbsp;tried&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;make&nbsp;a&nbsp;file&nbsp;layout&nbsp;that's&nbsp;somewhat&nbsp;clear.&nbsp;&nbsp;<br>
+<br>
+The&nbsp;End.<br>
+<br>
+<br>
+I&nbsp;did&nbsp;the&nbsp;easy&nbsp;part.&nbsp;The&nbsp;real&nbsp;thanks&nbsp;goes&nbsp;to&nbsp;those&nbsp;who&nbsp;wrote&nbsp;all&nbsp;these<br>
+packages.&nbsp;Especially,&nbsp;Lennart&nbsp;Staflin,&nbsp;the&nbsp;author&nbsp;of&nbsp;psgml.<br>
+<br>
+<br>
+Email&nbsp;me&nbsp;with&nbsp;problems,&nbsp;suggestions,&nbsp;etc.&nbsp;<br>
+<br>
+&nbsp;&nbsp;Mark&nbsp;Johnson&nbsp;mark@duke.edu&nbsp;&nbsp;$Date: 2007/04/20 13:10:54 $<br>
+<br>
+<br>
+Legal&nbsp;Stuff&nbsp;<br>
+===========<br>
+<br>
+Copyright&nbsp;(C)&nbsp;2001&nbsp;Mark&nbsp;Johnson&nbsp;mark@duke.edu<br>
+<br>
+With&nbsp;the&nbsp;exception&nbsp;of&nbsp;the&nbsp;included&nbsp;software&nbsp;already&nbsp;licensed,&nbsp;<br>
+this&nbsp;material&nbsp;is&nbsp;distributed&nbsp;under&nbsp;the&nbsp;followng&nbsp;terms:<br>
+<br>
+This&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify&nbsp;it&nbsp;under<br>
+the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by&nbsp;the&nbsp;Free<br>
+Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;2,&nbsp;or&nbsp;(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later<br>
+version.&nbsp;For&nbsp;details,&nbsp;see&nbsp;the&nbsp;file&nbsp;named&nbsp;COPYING.<br>
+<br>
+This&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,&nbsp;but&nbsp;WITHOUT<br>
+ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of&nbsp;MERCHANTABILITY&nbsp;or<br>
+FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License<br>
+for&nbsp;more&nbsp;details.<br>
+<br>
+The&nbsp;GNU&nbsp;Public&nbsp;License&nbsp;is&nbsp;included&nbsp;in&nbsp;the&nbsp;COPYING.txt&nbsp;file.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    </div>
+<br>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="3" bgcolor="#ffffff">
+<div class="navfoot" style="background:#ffffff">
+<hr>
+<table width="100%" border="0" cellpadding="0" summary="Footer navigation" bgcolor="#ffffff">
+<tbody>
+<tr valign="middle">
+<td align="left" width="33%"><span class="footdate">$Date: 2007/04/20 13:10:54 $</span></td><td align="center" width="34%"><span class="foothome"><a href="../README.html">Home</a></span></td><td align="right" width="33%"><span class="footcopy"><span class="copyright">Copyright © 2001 <a href="mailto:mark@duke.edu" target="_top">Mark Johnson</a>. </span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

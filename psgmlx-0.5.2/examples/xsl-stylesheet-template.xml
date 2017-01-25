@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xsl:stylesheet SYSTEM "dtds/xslt-html40s-lowercase.dtd">
+<!-- $Id: xsl-stylesheet-template.xml,v 1.1.1.1 2007/04/20 13:11:06 rich Exp $ -->
+
+
+<!--  This dtd has ambiguities that make validation, er, unlikely. -->
+<!--  These stylesheet dtds are useful for learning xsl,           -->
+<!--  but they aren't normative parts of the spec .                -->
+
+
+<xsl:stylesheet xmlns="http://www.w3.org/TR/REC-html40" 
+                xmlns:xsl="http://www.w3.org/XSL/1999/Transform" 
+                version="1.0">
+
+   <xsl:output method="html"/>
+
+   <xsl:template match="/">
+    <html>
+      <body style="background: #FFFFFF">
+	<xsl:apply-templates/>
+      </body>
+    </html>
+   </xsl:template>
+
+
+</xsl:stylesheet>
+

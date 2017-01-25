@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+ <!DOCTYPE slides SYSTEM "dtds/slides-xmltag.dtd">
+<!-- $Id: docbook-slides.xml,v 1.1.1.1 2007/04/20 13:11:06 rich Exp $ -->
+<slides label="label" status="status" id="ego">
+
+  <slidesinfo>
+    <author>
+      <firstname>Eugene</firstname>
+      <surname>First</surname>
+    </author>
+  </slidesinfo>
+
+  <section>
+    <title>Section Title</title>
+
+    <foil>
+      <title>Foil Title</title>
+      <para>This is a paragraph.</para>
+      <orderedlist numeration="loweralpha" inheritnum="ignore" continuation="restarts">
+	<listitem>
+	  <para>One list item</para>
+	</listitem>
+	<listitem>
+	  <para>Another list item.</para>
+	  <para>Multiple paragraphs, even.</para>
+	</listitem>
+      </orderedlist>
+    </foil>
+
+    <foil>
+      <title>Foiled Again</title>
+      <note>
+	<para>This is the end of this example.</para>
+	<para>This is an <xmltag class="starttag"
+	    color="red">xmltag</xmltag></para>
+      </note>
+    </foil>
+
+  </section>
+
+</slides>

@@ -1,0 +1,118 @@
+#!/bin/sh
+set -e
+
+#  $Id: test,v 1.1.1.1 2007/04/20 13:10:54 rich Exp $
+
+# This file is part of the psgmlx distribution.
+# See the README file for copyright and other information.
+
+prog=`basename $0`
+
+usage()
+{
+    echo
+    echo "Usage  $prog "
+    echo 
+    echo "This is the psgmlx test script."
+    echo "It simply byte-compiles the source files"
+    echo "and then loads a few sample files for you."
+    echo "It is also the first step of the installation process."
+    echo
+    echo "It takes no arguments"
+}
+
+
+# Check for --help or -h option
+for arg
+  do
+  opt=`echo $arg|sed 's/^\([^=]*\).*/\1/'`
+  val=`echo $arg|sed 's/^[^=]*=\(.*\)/\1/'`
+
+  case "$opt" in
+      --help)  usage; exit 0;;
+      -h)  usage; exit 0;;
+  esac
+done
+
+
+echo "I'm going to ask emacs to byte-compile the elisp source files."
+echo 
+echo "Unless you tell me otherwise, I'll use the command \"emacs\"."
+echo
+echo -n "Would you like to use a different command to call emacs? [y/N] "
+read input;
+if [ "$input" = "y" -o "$input" = "Y" ]; then
+    echo "Enter the command you'd like me to use:"
+    read input;
+    EMACS_COMMAND=$input
+    export EMACS_COMMAND
+else
+    export EMACS_COMMAND=emacs
+fi
+
+echo "Calling emacs with command:" \"${EMACS_COMMAND}\"
+
+
+export PSGMLX_DIR=${PWD}
+
+## Compile Packages ##
+
+echo "Compiling psgml..."
+echo
+cd ${PSGMLX_DIR}/packages/psgml 
+$EMACS_COMMAND --batch -q -l psgml-maint.el -f psgml-compile-files
+cd ${PSGMLX_DIR}
+echo 
+
+echo "Compiling xslide..."
+echo
+cd ${PSGMLX_DIR}/packages/xslide
+$EMACS_COMMAND --batch -q -l font-lock -l xslide-data.el -l xslide-abbrev.el \
+-l xslide-font.el -l xslide-process.el -l xslide.el -f batch-byte-compile *.el
+cd ${PSGMLX_DIR}
+echo 
+
+echo "Compiling tdtd..."
+echo
+cd ${PSGMLX_DIR}/packages/tdtd
+$EMACS_COMMAND --batch -q -l tdtd-font.el -l tdtd.el -l make-regexp.el \
+-l tdtd-font-maker.el -f batch-byte-compile *.el
+cd ${PSGMLX_DIR}
+echo 
+
+echo "Compiling remaining packages..."
+echo
+cd ${PSGMLX_DIR}/packages
+$EMACS_COMMAND --batch -q -l color-theme.el -l *.el -f batch-byte-compile *.el
+cd ${PSGMLX_DIR}
+echo 
+
+## Compile Config Files ##
+
+echo "Compiling config files..."
+echo
+$EMACS_COMMAND -batch -l ${PSGMLX_DIR}/lib/defs.el -l ${PSGMLX_DIR}/lib/load-init.el 
+echo
+
+
+
+## Load Sample Files
+
+echo
+echo -n "Load some sample files now? [Y/n] "
+read input;
+if [ "$input" = "n" -o "$input" = "N" ]; then
+    echo "No samples loaded. See README.html for more info."
+else
+    echo "Loading sample files with new X resources..."
+    $EMACS_COMMAND -q -l ${PSGMLX_DIR}/lib/defs.el  \
+	-l ${PSGMLX_DIR}/lib/load-samples.el -xrm '#include "dot-Xresources"' &
+fi
+
+echo
+echo "Done."
+
+
+exit 0
+
+# end of test

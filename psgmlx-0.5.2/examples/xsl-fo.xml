@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE fo:root SYSTEM "dtds/fo.dtd">
+<!-- $Id: xsl-fo.xml,v 1.1.1.1 2007/04/20 13:11:05 rich Exp $ -->
+
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" table-omit-footer-at-break="true">
+
+   <fo:layout-master-set>
+      <fo:simple-page-master master-name="foo">
+	 <fo:region-body/>
+      </fo:simple-page-master>
+   </fo:layout-master-set>
+
+   <fo:page-sequence master-name="foo">
+      <fo:flow flow-name="foo">
+	 <fo:marker></fo:marker>
+	 <fo:block>
+	    <fo:leader>
+	    </fo:leader>
+	 </fo:block>
+      </fo:flow>
+   </fo:page-sequence>
+
+</fo:root>
+
+

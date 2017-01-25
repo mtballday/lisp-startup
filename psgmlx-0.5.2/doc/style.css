@@ -1,0 +1,158 @@
+
+
+body.webpage  { background: #000000; foreground: #000000; } 
+
+body.homepage { background: #000000; foreground: #000000; } 
+
+div.meta      { color: #003366; font-style: italic; }
+
+/* ======== Home page "naked" paragraph  ======== */
+  
+td.homepagemain p      { margin-left: 1em; 
+                         margin-right: 1em; }
+
+
+/* td.homepagemain        { padding-top: 1em; }  */
+
+/* ======== webpage content area ======== */
+
+
+div.sect1              { padding-top: 2em; }
+
+div.webpage            { padding-right: 1em;}
+
+div.orderedlist a       { color: #003366; font-weight:bold; 
+                          text-decoration: underline; }
+div.orderedlist a:hover { color: #0000ff; font-weight:bold; 
+                          text-decoration: underline; }
+
+h3.title span.title a        { color: #003366; 
+                               font-weight:bold; 
+                               text-decoration: underline; } 
+h3.title span.title a:hover  { color: #0000FF; 
+                               font-weight:bold; 
+                               text-decoration: underline; } 
+
+h2 span.title i        { color: #003366;  font-weight:bold;  
+                         font-style:italic; }
+
+h2 span.title tt       { color: blue; font-weight:bold; }
+
+span.admontitle        { font-weight: bold; } 
+
+/* ======= Hierarchy Indentation  =========== */
+
+
+/* .sect1, .sect2, .sect3, .sect4, .sect5   { margin-left: .7em; 
+                                         margin-right: .2em; }    */
+/*  
+div.sect1 div.sect2 div.sect3 div.sect4 div.sect5   { margin-left: 1.2em; 
+                                                      margin-right: .2em; }   */
+
+
+div.sect1            { margin-left: .2em; margin-right: .2em; } 
+div.sect2 div.sect3  { margin-left: .2em; margin-right: .2em; } 
+div.sect3 div.sect4  { margin-left: .2em; margin-right: .2em; } 
+div.sect4 div.sect5  { margin-left: .2em; margin-right: .2em; } 
+div.sect5            { margin-left: .2em; margin-right: .2em; } 
+
+
+h2.title, h3.title, h4.title, h5.title, h6.title  { margin-left: -.1em; } 
+/* font-size: 1.8em; */
+
+
+        /* == Q & A Indentation  === */
+
+div.qandaset    { margin-left: .5em;  margin-right: .2em; } 
+
+div.qandadiv    { margin-left: .5em; font-weight: bold; margin-right: .2em; }
+
+div.question    { margin-left: .5em; font-weight: normal; }
+
+div.answer      { margin-left: .5em; font-weight: normal;  }        
+
+
+/* ======== Links ========= */
+
+A:link    { color: #003366;  } 
+A:visited { color: #003366;  } 
+A:hover   { color: #0000FF;  } 
+A:active  { color: #FF0000;  } 
+
+/* ======== Navigation Links ========= */
+
+.navtoctitle     { font-weight: bold;           /*   title of the nav bar */
+                   padding-left: 2em; 
+                   padding-top: 2em;}       
+
+
+ /* Top-level links */
+span.toclevel1 a     { font-weight: bold; 
+                       text-decoration: none; } 
+
+
+/*  Text for current page */
+.xnavtoc         { color: #660000;          
+                   font-style: italic; 
+                   font-weight: bold; 
+                   white-space: nowrap; }
+
+/*  Child links of current page */
+
+span.ynavtoc a         { text-decoration: none; 
+                         white-space: nowrap;
+                         font-style:italic;  }
+  
+span.ynavtoc a:link    { color: #003366;  }  
+span.ynavtoc a:visited { color: #003366;  } 
+span.ynavtoc a:hover   { color: #0000FF; font-weight: bold; } 
+span.ynavtoc a:active  { color: #FF0000; font-weight: bold; } 
+
+
+  /* everything else  */
+
+span.navtoc a         { text-decoration: none; white-space: nowrap;  }  
+span.navtoc a:link    { color: #003366;  }  
+span.navtoc a:visited { color: #003366;  } 
+span.navtoc a:hover   { color: #0000FF; font-weight: bold; } 
+span.navtoc a:active  { color: #FF0000; font-weight: bold; } 
+
+/* center all images */
+div.mediaobject  { text-align: center; } 
+
+/* ========= Footer  Stuff ============= */
+
+.navfoot           { padding: .3em; } 
+
+.footfeed          { font-size: smaller; }
+
+.foothome          { font-weight: bold; } 
+
+.footcopy          { color: black;
+                     font-size: 70%;  }
+
+.copyright         { font-size: smaller; }   
+
+.footdate          { color: black;
+                     font-size: 70%; }
+
+
+   /* ==========  Other ============ */
+
+.caption          { font-weight: bold; } 
+
+/* .blockquote       { margin-left: 1em; */
+/*                     margin-right: 1em; } */
+
+.mediaobject      { margin-bottom: 1em; } 
+
+div.variablelist  { margin-left: 1em;
+                    margin-right: 1em; }
+
+table.simplelist       { padding-left: 2em; }
+
+.term 	    	  { font-weight: bold }
+
+span.fixme         { font-weight: bold;
+                     color: red; }
+

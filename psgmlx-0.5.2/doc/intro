@@ -1,0 +1,106 @@
+intro for psgmlx 0.5    $Id: intro,v 1.1.1.1 2007/04/20 13:10:54 rich Exp $
+
+It must've worked, or you wouldn't be reading this...
+
+
+For the Impatient
+=================   
+
+ In sgml-mode & xml-modes:
+
+        -- Right-click in the XML documents to generate popup menus
+
+        -- Change color themes at bottom of the "SGML" menu
+
+
+
+For the Less Impatient
+======================
+
+
+Adding psgmlx to Emacs Startup
+-----------------------------
+
+Put this snippet in your .emacs:
+
+        (setq psgmlxpath "path-to-psgmlx-directory")
+        (load (concat psgmlxpath "/init"))
+
+The path should NOT have a trailing slash. (The dot-emacs.el file has
+an example.)
+
+
+Using the Current X Resources (menubar colors, mainly)
+-----------------------------
+
+--== Note: this step is no longer recommended ==--
+
+        Add the dot-Xresources stuff to your .Xresources file.  Run
+        "xrdb ~/.Xresources"
+ 
+
+Customization
+-------------
+
+  -Miscellaneous Settings:
+
+        The settings you are using in this test-drive were loaded from
+        the "misc-settings.el" file, but are not loaded by
+        default. You can load them at startup by putting the following
+        line in your .emacs, BEFORE you load psgmlx-init:
+
+                (setq misc-settings t)
+
+  -Windows Keyboard Bindings/Shortcuts:
+
+        If you want windows-style CUT, COPY, PASTE, and UNDO keyboard
+        commands, put the following in your .emacs BEFORE you load
+        psgmlx-init:
+
+                (setq winkeys t)
+
+  -Default Color-Theme:
+
+        Edit "default-color-theme.el" to select what you wamt, or put
+        it's content in your .emacs. This stuff must go AFTER you load
+        psgmlx-init, when emacs will know where to find things.
+
+  -Color-Themes:
+
+        You can change color themes at anytime while in sgml-mode by
+        choosing a different theme from the "Color Themes" submenu of
+        the "SGML" menu.
+
+        Note: Emacs21 users will want to make new frames after
+        changing to a theme other than the default. The cursor and
+        mouse pointer don't update properly. (Could be my fault...)
+
+
+
+SGML Configuration
+------------------
+
+        If your system uses SGML catalogs, psgmlx assumes that the
+        root sgml catalog file is "/etc/sgml/catalog". If you wish to
+        change this setting, put the following in your .emacs file:
+
+            (setq sgml-catalog-files '("path-to-catalog-file"))
+ 
+
+        Since I've provided the xml declaration (xml.dcl in lib), you
+        won't need to set that variable.
+
+
+SGML Menu Configuration: 
+------------------------        
+
+        You can customize both of the "Insert DTD" and "Custom Markup"
+        menus. The examples in conf/psgml/menu-data will show you how.
+
+
+
+
+        'Hope all these frames aren't too annoying...
+
+
+          Mark Johnson <mrj@debian.org>  $Date: 2007/04/20 13:10:54 $

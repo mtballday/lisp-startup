@@ -1,0 +1,25 @@
+! .Xdefaults entries that make Emacs' font-lock have colours somewhat like hilit19.
+! Best used with face-lock.el or Emacs 19.29.
+! For dark background.
+!
+Emacs.font-lock-comment-face.attributeItalic:		on
+Emacs.font-lock-function-name-face.attributeBold:	on
+Emacs.font-lock-keyword-face.attributeBold:		on
+!
+Emacs.font-lock-comment-face.attributeForeground:	green
+Emacs.font-lock-doc-string-face.attributeForeground:	green
+Emacs.font-lock-string-face.attributeForeground:	blue
+Emacs.font-lock-function-name-face.attributeForeground:	blue
+Emacs.font-lock-keyword-face.attributeForeground:	green
+Emacs.font-lock-type-face.attributeForeground:		blue
+!
+!*** Miscellaneous faces ***
+!
+Emacs.w3-node-style.attributeForeground:		green
+Emacs.w3-visited-node-style.attributeForeground:	orange
+!							
+Emacs.modeline.attributeForeground:			black
+Emacs.modeline.attributeBackground:			pink
+Emacs.highlight.attributeForeground:			black
+Emacs.region.attributeForeground:			black
+Emacs.secondary-selection.attributeForeground:		black

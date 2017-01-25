@@ -1,0 +1,177 @@
+INSTALL for psgmlx 0.4
+$Id: INSTALL,v 1.1.1.1 2007/04/20 13:10:54 rich Exp $
+
+Installation Instructions:
+
+The main installation tasks are byte-compiling the source files, 
+and telling Emacs how to find the installation directory.
+
+You can easily test the package before you decide to edit your .emacs 
+file by executing the "test" script.
+
+
+Installation Step I: the "test" script
+==========================================
+
+1. Uncompress the tarball somewhere. Rename it if you want.
+
+2. Change into the psgmlx directory. 
+
+3. (a) Installation Via the "test" Script  
+
+   Execute the "test" script: ./test
+        
+   What the test script does: 
+
+        First, it calls emacs in batch-mode to byte compile most of
+        the source files. Ignore the warnings.
+
+        Next, it starts a fresh copy of emacs and loads some sample
+        files in new frames with new X resource settings.
+        Furthermore, each frame displays one of the SGML color themes,
+        which are part pf the package..
+
+        Change themes using the "Color Themes" menu under "SGML".
+
+   
+   (b) Installation WITHOUT the Script
+
+        If you don't (or can't) run the test script, you can easily 
+        do the steps by hand.      
+ 
+        i.  CD into the psgmlx directory with your favorite terminal.
+
+        ii. Read the "test" script and do the compilation steps with
+            shell commands, or by loading and coompiling the files
+            through Emacs.
+
+        iii. Have emacs load the samples and new X resources, skipping
+             your regular .emacs stuff:
+
+      "emacs -q -l lib/load-samples.el -xrm '#include "dot-Xresources"' "
+
+
+Additional Steps for Regular Use
+================================
+
+Add psgmlx to Emacs Startup
+---------------------------
+
+4. Tell Emacs how to find psgmlx. Add a snippet to your .emacs:
+
+        (setq psgmlxpath "path-to-psgmlx-directory")
+        (load (concat psgmlxpath "/init"))
+
+           The path should NOT have a trailing slash.
+   
+           For example, if you untarred it in your home 
+           directory and didn't change its name, you'd have
+ 
+                (setq psgmlxpath "~/psgmlx-0.3")
+                (load (concat psgmlxpath "/init"))
+
+          The dot-emacs.el file has the same info.
+
+
+Optional: Modify your X Resources
+---------------------------------
+
+5. Add the dot-Xresources stuff to your .Xresources file.  Run "xrdb
+   ~/.Xresources"
+ 
+
+
+Customization
+-------------
+
+6. Miscellaneous Settings:
+
+        The stuff in "misc-settings.el" is loaded in the demo, but not
+        by default. To always load this file at start-up, put the
+        following in your .emacs, BEFORE you load psgmlx-init:
+
+                (setq misc-settings t)
+
+7. Windows Keyboard Bindings/Shortcuts
+
+        If you want windows-style CUT, COPY, PASTE, and UNDO keyboard
+        commands, put the following in your .emacs BEFORE you load
+        psgmlx-init:
+
+                (setq winkeys t)
+
+8. Default Color-Theme
+
+        Edit "default-color-theme.el" to select what you wamt, or put
+        it's content in your .emacs. This stuff must go AFTER you load
+        psgmlx-init, when emacs will know where to find things.
+
+
+9. Color-Themes
+
+        You can change color themes at anytime while in sgml-mode by
+        choosing a different theme from the "Color Themes" submenu of
+        the "SGML" menu.
+
+        Note: Emacs21 users will want to make new frames after
+        changing to a theme other than the default. The cursor and
+        mouse pointer don't update properly. (Could be my fault...)
+
+
+
+SGML Configuration
+------------------
+
+10. If your system uses SGML catalogs, psgmlx assumes that the root
+    sgml catalog file is "/etc/sgml/catalog". If you wish to change
+    this setting, put the following in your .emacs file:
+
+            (setq sgml-catalog-files '("path-to-catalog-file"))
+ 
+     Since I've provided the xml declaration (xml.dcl in lib), you
+     won't need to set that variable.
+
+
+11. Menu Configuration: 
+        
+        You can customize both of the "Insert DTD" and "Custom Markup"
+        menus. The files in the conf/psgml/ directory named data-*
+        provide examples.
+
+
+12. Until I have time to write better docs, you'll have to peruse the
+    files in the conf directory to do any further customization. You
+    shouldn't have any problems, I tried to make a file layout that's
+    somewhat clear.
+
+The End.
+
+
+I did the easy part. The real thanks goes to those who wrote all these
+packages. Especially, Lennart Staflin, the author of psgml.
+
+
+Email me with problems, suggestions, etc.
+
+  Mark Johnson <mrj@debian.org>  $Date: 2007/04/20 13:10:54 $
+
+
+Legal Stuff 
+===========
+
+Copyright (C) 2001, 2002 Mark Johnson <mrj@debian.org>
+
+With the exception of the included software already licensed, 
+this material is distributed under the followng terms:
+
+This is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 2, or (at your option) any later
+version. For details, see the file named COPYING.
+
+This is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+The GNU Public License is included in the COPYING.txt file.

@@ -1,0 +1,4 @@
+;;;; keyboard macros
+;; dos2unix
+(fset 'dos2unix
+   [?\C-c ?\C-r ?\C-q ?\C-m ?$ return return])

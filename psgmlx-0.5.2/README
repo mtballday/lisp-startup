@@ -1,0 +1,118 @@
+README for psgmlx 0.4
+$Id: README,v 1.1.1.1 2007/04/20 13:10:54 rich Exp $
+
+psgmlx is a collection of customizations and extensions for psgml that
+make it easy and user-friendly to edit xml and sgml documents. 
+
+I tried to create something that automates the installation, but that 
+isn't too complex for an inexperienced emacs user to understand and configure.
+
+I've only tested the setup with FSF/GNU Emacs, versions 20.7 and 21.2.
+ 
+FEATURES
+========
+  - easy install, with demo
+  - preconfigured psgml menus
+  - documented config files
+  - automatic syntax highlighting
+  - custom, menu-selectable sgml color themes
+  - psgml-derived html-mode 
+
+
+WHAT'S INCLUDED:
+================
+  - psgml, version 1.2.5
+  - psgml extension package (xpointer)
+  - xsl-mode (xslide package)
+  - dtd-mode (tdtd package)
+  - sgml-html-mode (from the NTSGML site)
+  - css-mode 
+  - xrdb-mode (for editng .Xresources)
+  - cua-mode (provides windows keybindings)
+  - dircolors (provides colored listings)
+  - docbook and other xml, xsl, and dtd sample files
+
+Manifest
+========
+
+BUGS                    - Bugs
+COPYING.txt             - GNU license
+ChangeLog               - the changelog file
+INSTALL                 - installation instructions
+README                  - you're reading it
+default-theme.el        - sets the default color theme
+dot-emacs.el            - snippets for your .emacs file
+dot-Xresources          - snippets for your .Xresources
+init.el                 - main initialization file      
+misc-settings.el        - startup settings (for new emacs users)
+test                    - install/test script
+conf/
+        css-mode-config.el      - css-mode config
+        dtd-mode-config.el      - dtd-mode config
+        load-psgml-configs.el   - loads and recompiles psgml config files 
+        winkeys-config.el       - CUA-mode config
+        xrdb-mode-config.el     - xrdb-mode config
+        xsl-mode-config.el      - xsl-mode config
+
+conf/psgml/
+        autoloads.el                    - autoload behavior
+        data-custom-markup-menu.el      - sample menu items for Custom markup menu
+        data-insert-dtd-menu.el         - sample menu items for Insert DTD menu
+        faces.el                        - create sgml-mode faces
+        macros-sgml.el                  - generic sgml-mode keyboard macros
+        macros-docbook.el               - docbook keyboard macros
+        settings.el                     - main psgml config file 
+        sgml-html-mode.el               - provides html-mode
+
+lib/
+        defs.el                 - function and varibles definitions
+        html.decl               - html declaration
+        load-init.el            - load init file, compile configs (used by test script)
+        load-samples.el         - load sample files (used by test script)
+        xml.dcl                 - xml declaration
+
+packages/
+        psgml/                  - psgml 1.2.2, patched for emacs21
+        tdtd/                   - tdtd package, dtd-mode
+        xslide/                 - xslide package, xsl-mode
+        color-theme.el          - color-theme package
+        color-theme-sgml.el     - custom themes for sgml-mode
+        css-mode.el             - provides css-mode
+        cua-mode.el             - provides windows keybindings
+        dircolors.el            - provides colored buffer listings
+        psgml-xpointer.el       - provides xpointer for current element
+        xrdb-mode.el            - provides mode for editing Xresource files
+
+examples/
+        - example xml and xsl documents, and some dtds
+
+
+-- See the INSTALL file for setup info --
+
+NOTE: xslide and tdtd have moved to http://www.menteith.com/
+
+
+  Email me with problems, suggestions, etc. 
+
+  Mark Johnson <mrj@debian.org> $Date: 2007/04/20 13:10:54 $
+  
+
+Legal Stuff 
+===========
+
+Copyright (C) 2001, 2002 Mark Johnson <mrj@debian.org>
+
+With the exception of the included software already licensed, 
+this material is distributed under the followng terms:
+
+This is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 2, or (at your option) any later
+version. For details, see the file named COPYING.
+
+This is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+The GNU Public License is included in the COPYING.txt file.

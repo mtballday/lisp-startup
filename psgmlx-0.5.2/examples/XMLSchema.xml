@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+ <!DOCTYPE xs:schema SYSTEM "dtds/XMLSchema.dtd">
+<!-- $Id: XMLSchema.xml,v 1.1.1.1 2007/04/20 13:11:06 rich Exp $ -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  finalDefault="" blockDefault="" elementFormDefault="unqualified" 
+  attributeFormDefault="unqualified">
+
+
+
+
+
+
+</xs:schema>

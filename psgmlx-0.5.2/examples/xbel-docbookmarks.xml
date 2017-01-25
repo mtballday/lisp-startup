@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+ <!DOCTYPE xbel SYSTEM "dtds/xbel.dtd">
+<!-- $Id: xbel-docbookmarks.xml,v 1.1.1.1 2007/04/20 13:11:05 rich Exp $ -->
+<xbel>  
+
+  <info>
+    <metadata owner="Mark Johnson"/>
+  </info>
+
+  <desc>These are DocBook bookmarks written in the XML BookMark
+    Exchamge Language, or XBEL.</desc>
+
+
+  <separator/>
+  <!-- ======================= DocBook Docs ======================  -->
+  <folder><title>DocBook Docs</title>
+
+    <!-- === Novice Docs=== -->
+    <folder>
+      <title>Novice Docs</title>
+      <bookmark href="http://www.lst.de/~eric/crash-course/HTML/index.html" >
+	<title>DocBook Crash-Course</title>
+      </bookmark>
+      <bookmark href="http://www.oswg.org/oswg-nightly/oswg/en_US.ISO_8859-1/articles/DocBook-Intro/docbook-intro/index.html">
+	<title>A Practical Introduction to DocBook</title>
+      </bookmark>
+      <bookmark href="http://www.ibiblio.org/godoy/sgml/docbook/howto/">
+	<title>DocBook HOWTO</title>
+      </bookmark>
+      <bookmark href="http://people.redhat.com/twaugh/docbook/selfdocbook/selfdocbook.html">
+	<title>Selfdocbook</title>
+      </bookmark>
+      <bookmark href="http://www.labs.redhat.com/whitepapers/tutorial/index.html">
+	<title>Gnome White Paper HOWTO</title>
+      </bookmark>
+      <bookmark href="http://24.112.178.91/cogent/prepdoc/pd-tools.html">
+	<title>DocBook Tools Overview (Cogent, Inc.)</title>
+      </bookmark>
+    </folder>
+
+    
+    <!-- === SGML on NT === -->
+    <folder><title>SGML on NT</title>
+      <bookmark href="http://ourworld.compuserve.com/homepages/hoenicka_markus/ntsgml.html">
+	<title>NTSGML Home</title>
+      </bookmark>
+      <bookmark href="http://ourworld.compuserve.com/homepages/hoenicka_markus/book1.html">
+	<title>NTSGML</title>
+      </bookmark>
+      <bookmark href="http://ourworld.compuserve.com/homepages/hoenicka_markus/cygbook1.html">
+	<title>Cygwin NTSGML</title>
+      </bookmark>
+    </folder>
+
+
+
+    <!-- === KDE Project === -->
+    <folder> <title>KDE Project</title>
+      <bookmark href="http://i18n.kde.org/doc/">
+	<title>KDE Doc Home</title>
+      </bookmark>
+      <bookmark href="http://madmax.atconnex.net/kde/">
+	<title>KDE HandBook</title>
+      </bookmark>
+    </folder>
+
+    <!-- === GNOME Project === -->
+    <folder><title>GNOME Project</title>
+      <bookmark href="http://developer.gnome.org/projects/gdp/">
+	<title>GNOME Doc Home</title>
+      </bookmark>
+      <bookmark href="http://developer.gnome.org/projects/gdp/handbook/gdp-handbook/">
+	<title>GNOME Handbook</title>
+      </bookmark>
+    </folder>
+
+    <!-- === Free BSD === -->
+    <folder> <title>FreeBSD</title>
+      <bookmark href="http://www.freebsd.org/tutorials/docproj-primer/index.html">
+	<title>FreeBSD DocBook Primer</title>
+      </bookmark>
+      <bookmark href="http://ella.slis.indiana.edu/~jfieber/docbook/markupguide.html">
+	<title>Using Docbook SGML</title>
+      </bookmark>
+    </folder>
+
+    <!-- === Reference === -->
+    <folder>
+      <title>Reference</title>
+      <bookmark href="http://docbook.org/tdg/html/docbook.html">
+	<title>DocBook - Definitive Guide</title>
+      </bookmark>
+      <bookmark href="http://docbook.org/tdg/html/refelem.html#AT.IDREFS">
+	<title>DocBook 3.1 Element Reference</title>
+      </bookmark>
+      <bookmark href="http://docbook.org/tdg/40update/#DB40.CHANGES">
+	<title>Changes in DocBook 4.0</title>
+      </bookmark>
+      <bookmark href="http://nwalsh.com/docbook/defguide/qr/quickref.htm">
+	<title>DocBook V3.1 Quick Reference</title>
+      </bookmark>
+      <bookmark href="http://ed.phy.duke.edu/xml/dtd/docbook/tdg/">
+	<title>Duke DocBook Refs</title>
+      </bookmark>
+    </folder>
+  </folder>
+
+  <separator/>
+
+  <folder>
+    <title>Catalog Support for XSLT Processors</title>
+    <bookmark href="http://www.arbortext.com/customer_support/updates_and_technical_notes/catalog101.zip">
+      <title>Norm Walsh's Arbortext Catalog Classes (XT)</title>
+      <desc>Add support to XT</desc>
+    </bookmark>
+    <bookmark href="http://www.kosek.cz/xml/saxon/">
+      <title>Arbortext Wrapper Classes for Saxon</title>
+    </bookmark>
+  </folder>
+
+
+
+  <separator/>
+  <!-- ======================= Stylesheets ======================  -->
+
+  <folder><title>Stylesheets</title>
+    <bookmark href="http://nwalsh.com/docbook/dsssl/doc/indexing.html">
+      <title>Automatic Indexing with DSSSL Stylesheets</title>
+    </bookmark>
+    <bookmark href="http://www.oreilly.com/people/staff/crism/dsssl/orastyle/index.html">
+      <title>O'Reilly DSSSL Stylesheets</title>
+    </bookmark>
+    <bookmark href="http://nwalsh.com/docbook/xsl/index.html">
+      <title>XSL DocBook Stylesheets</title>
+    </bookmark>
+    <bookmark href="http://nwalsh.com/docbook/dsssl/index.html">
+      <title>DSSSL DocBook Stylesheets</title>
+    </bookmark>
+    <bookmark href="http://people.redhat.com/dcm/dsssl/dsssl-tutorial/dsl-tutorial.html">
+      <title>Introduction to DSSSL</title>
+    </bookmark>
+    <bookmark href="http://coli.lili.uni-bielefeld.de/Texttechnologie/dsssl_ma/dsssl/index.html">
+      <title>Visual Introduction to DSSSL (V0.2)</title>
+    </bookmark>
+    <bookmark href="http://www.netfolder.com/DSSSL/index.html">
+      <title>DSSSL Page</title>
+    </bookmark>
+    <bookmark href="http://www.prescod.net/dsssl/">
+      <title>Introduction to DSSSL</title>
+    </bookmark>
+  </folder>
+
+  <separator/>
+  <!-- ======================= Mailing Lists ======================  -->
+
+  <folder><title>Mailing Lists</title>
+
+    <bookmark href="http://sources.redhat.com/ml/docbook-apps/">
+      <title>docbook-apps</title>
+    </bookmark>
+    <bookmark href="http://sources.redhat.com/ml/docbook-tools-discuss/">
+      <title>docbook-tools-discuss</title>
+    </bookmark>
+    <bookmark href="http://lists.debian.org/#debian-sgml">
+      <title>debian-sgml</title>
+    </bookmark>
+    <bookmark href="http://master.kde.org/pipermail/kde-docbook/">
+      <title>kde-docbook</title>
+    </bookmark>
+    <bookmark href="http://mail.gnome.org/archives/gnome-doc-list/">
+      <title>gnome-doc</title>
+    </bookmark>
+    <bookmark href="http://listas.conectiva.com.br/listas/docbook-tools/arquivo/">
+      <title>docbook-tools-connctive</title>
+    </bookmark>
+    <bookmark href="http://listas.conectiva.com.br/listas/docbook-utils/arquivo/">
+      <title>docbook-utils-connectiva</title>
+    </bookmark>
+    <bookmark href="http://sources.redhat.com/ml/docbook/">
+      <title>docbook (dtd only)</title>
+    </bookmark>
+
+
+    <!-- === PSGML ===  -->
+
+    <folder folded="yes"> <title>PSGML</title>
+      <bookmark href="http://sourceforge.net/mail/?group_id=9156">
+	<title>Index</title>
+      </bookmark>
+      <bookmark href="http://www.geocrawler.com/lists/3/SourceForge/7085/0/">
+	<title>psgml-user</title>
+      </bookmark>
+      <bookmark href="http://www.geocrawler.com/lists/3/SourceForge/7086/0/">
+	<title>psgml-devel</title>
+      </bookmark>
+    </folder>
+
+  </folder>
+
+  <separator/>
+
+  <!-- ======================= Emacs/PSGML ======================  -->
+
+  <folder><title>Emacs/PSGML</title>
+    <bookmark href="http://www.snee.com/bob/sgmlfree/emcspsgm.html">
+      <title>PSGML Tricks</title>
+    </bookmark>
+    <bookmark href="http://www.snee.com/bob/sgmlfree/psgmqref.html">
+      <title>Emacs/PSGML Quick Reference</title>
+    </bookmark>
+    <bookmark href="http://www.lst.de/~eric/crash-course/HTML/emacs.html">
+      <title>PSGML tips (Crash-Course)</title>
+    </bookmark>
+    <bookmark href="http://ed.phy.duke.edu/xml/psgml-tips/index.html">
+      <title>PSGML Tips (Duke)</title>
+    </bookmark>
+    <bookmark href="http://24.112.178.91/cogent/prepdoc/x574.html">
+      <title>Emacs/PSGML Tips (Cogent Internal Docs)</title>
+    </bookmark>
+    <bookmark href="http://www.gnu.org/manual/emacs/index.html">
+      <title>GNU Emacs Manual </title>
+    </bookmark>
+    <bookmark href="http://ed.phy.duke.edu/docs/emacs-faq/">
+      <title>GNU Emacs FAQ </title>
+    </bookmark>
+  </folder>
+
+  <!-- ======================= Specs ======================  -->
+  <separator/>
+
+  <folder>
+    <title>FileSystem Specs</title>
+    <bookmark href="http://www.linuxbase.org/">
+      <title>Linux Standard Base</title>
+    </bookmark>
+    <bookmark href="http://www.linuxbase.org/spec/">
+      <title>LSB Test Suite</title>
+    </bookmark>
+    <bookmark href="http://www.pathname.com/fhs/">
+      <title>Filesystem Hierarchy Standard</title>
+    </bookmark>
+  </folder>
+
+
+  <separator/>
+  <!-- ======================= Debian ======================  -->
+
+  <folder folded="yes"> <title>Debian</title>
+    
+    <bookmark href="http://www.debian.org/doc/ddp">
+      <title>Documentation Project Homepage</title>
+    </bookmark>
+
+    <!-- === DDP Manuals ===  -->
+    <folder> <title>DDP Manuals</title>
+      <bookmark href="http://www.debian.org/doc/manuals/">
+	<title>All Manuals (CVS versions)</title>
+      </bookmark>
+      <bookmark href="http://www.debian.org/doc/devel-manuals">
+	<title>Developer Index</title>
+      </bookmark>
+      <bookmark href="http://www.debian.org/doc/admin-manuals">
+	<title>Admin Index</title>
+      </bookmark>
+      <bookmark href="http://www.debian.org/doc/user-manuals">
+	<title>User Index</title>
+      </bookmark>
+    </folder>
+
+    <!-- === Lists ===  -->
+    <folder folded="yes"><title>Lists</title>
+      <bookmark href="http://lists.debian.org/#debian-sgml">
+	<title>debian-sgml</title>
+      </bookmark>
+      <bookmark href="http://lists.debian.org/#debian-doc">
+	<title>debian-doc</title>
+      </bookmark>
+      <bookmark href="http://lists.debian.org/#debian-devel">
+	<title>debian-devel</title>
+      </bookmark>
+    </folder>
+
+  </folder>
+
+  <separator/>
+</xbel>

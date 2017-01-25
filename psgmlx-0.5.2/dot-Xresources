@@ -1,0 +1,70 @@
+! -*-xrdb-*- $Id: dot-Xresources,v 1.1.1.1 2007/04/20 13:10:54 rich Exp $
+
+! ============ GNU Emacs Resources for psgmlx ============
+
+! To make your menubar and popup menus look spiffy...
+! Try the Lucid or the Motif resources, and see which set works for you
+
+
+! ----- GENERAL RESOURCES -----
+
+! Emacs.Font: -b&h-lucidatypewriter-medium-*-*-*-*-120-*-*-*-*-iso8859-1
+! Emacs.geometry:		90x45
+
+*beNiceToColormap:  False
+
+
+
+
+!  ================ Motif Toolkit Resources  ================
+
+! ----- MENUBAR -----
+Emacs.pane.menubar.*.shadowThickness:      2
+Emacs.pane.menubar.*.bottomShadowColor:    gray60
+Emacs.pane.menubar.*.topShadowColor:       gray97
+Emacs.pane.menubar.*.borderWidth:          1
+Emacs.pane.menubar.*.armColor:             Navy
+Emacs.pane.menubar.*.font: -adobe-helvetica-medium-r-normal-*-*-120-*-*-p-*-iso8859-1
+
+
+! ---- POPUP MENUS ----
+! Note: Motif Popups use `menu*' instead of `pane.menubar
+Emacs.menu*.shadowThickness:      2
+Emacs.menu*.bottomShadowColor:    gray60
+Emacs.menu*.topShadowColor:       gray97
+Emacs.menu*.borderWidth:          1
+Emacs.menu*.armColor:             DarkGreen
+Emacs.menu*.font:     -adobe-helvetica-medium-r-normal-*-*-120-*-*-p-*-iso8859-1
+
+! -------------- END Motif Toolkit Resources ---------------
+
+
+
+
+! =============== Lucid Toolkit Resources  ===============
+
+! ----- MENUBAR -----
+Emacs*menubar*Foreground:		black
+Emacs*menubar*Background:		gray87
+Emacs.pane.menubar.shadowThickness:     2
+Emacs.pane.menubar.buttonBackground:    gray87
+Emacs.pane.menubar.margin:              1
+Emacs.pane.menubar.verticalSpacing:     0
+Emacs.pane.menubar.horizontalSpacing:   3
+Emacs.pane.menubar.arrowSpacing:        2
+Emacs.pane.menubar.font:  -adobe-helvetica-medium-r-normal-*-*-120-*-*-p-*-iso8859-1
+
+
+! ---- POPUP MENUS ----
+Emacs*popup*Foreground:			black
+Emacs*popup*Background:		        gray87
+Emacs*popup*shadowThickness:		2
+Emacs*popup*font: -adobe-helvetica-medium-r-normal-*-*-120-*-*-p-*-iso8859-1
+
+! -------------- END Lucid Toolkit Resources ---------------
+
+
+
+
+! ---- Emacs 21 TOOLBAR ----
+! Emacs*toolbar*Background:		gray87

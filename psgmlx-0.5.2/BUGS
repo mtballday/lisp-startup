@@ -1,0 +1,27 @@
+BUGS file for psgmlx      $Id: BUGS,v 1.1.1.1 2007/04/20 13:10:54 rich Exp $
+
+
+*** psgmlx Bugs ***
+
+
+- Emacs21:
+
+        Problem:    When switching themes, neither the cursor nor the mouse
+                    pointer update properly. 
+        Workaround: Create new frame(s) after changing themes. 
+
+        Problem:    Sometimes chokes on XSL stylesheets. Not sure why. 
+
+
+
+- WinNT:
+
+        Problem: The test script is likely to fail.
+
+        Workaround: Install Cygwin and see that Bash and Emacs are properly 
+                    configured using the cywin32-mount.el package. 
+                    See the instructions at the NTSGML site:
+         http://ourworld.compuserve.com/homepages/hoenicka_markus/cygbook1.html
+                        
+                
+Mark Johnson <mark@duke.edu> $Date: 2007/04/20 13:10:54 $
