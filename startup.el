@@ -99,6 +99,7 @@
 (autoload 'c++-mode  "cc-mode" "C++ Editing Mode" t)
 (autoload 'c-mode    "cc-mode" "C Editing Mode" t)
 (autoload 'objc-mode "cc-mode" "Objective-C Editing Mode" t)
+
 (setq auto-mode-alist
   (append '(("\\.C$"        . c++-mode)
             ("\\.cc$"       . c++-mode)
@@ -191,6 +192,16 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
+
+(setq python-shell-interpreter "python3"
+      python-shell-interpreter-args "-i")
+
+(setq elpy-rpc-python-command "python3")
+(elpy-enable)
+(add-hook
+ 'elpy-mode-hook
+ '(lambda () (setq-local ac-max-width 0.5)))
+
 
 ; package-refresh-contents
 ; need to M-x package-install RET jedi RET
