@@ -14,12 +14,10 @@
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/matlab")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/outline-magic")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/doc-mode-1.1/doc-mode.el")
-(byte-compile-if-newer-and-load "$HOME/lisp-startup/csharp-mode-0.4.0")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/csv-mode")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/org-outlook")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/graphviz-dot-mode")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/markdown-mode.el")
-;(load-library "p4")
 
 (require 'package)
 (add-to-list 'package-archives
@@ -190,3 +188,11 @@
 (global-font-lock-mode 1)
 (setq-default indent-tabs-mode nil)
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/"))
+
+; package-refresh-contents
+; need to M-x package-install RET jedi RET
+; and
+; M-x package-install RET elpy RET
