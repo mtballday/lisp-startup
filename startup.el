@@ -14,9 +14,9 @@
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/matlab")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/outline-magic")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/doc-mode-1.1/doc-mode.el")
-(byte-compile-if-newer-and-load "$HOME/lisp-startup/csv-mode")
+;;(byte-compile-if-newer-and-load "$HOME/lisp-startup/csv-mode")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/org-outlook")
-(byte-compile-if-newer-and-load "$HOME/lisp-startup/graphviz-dot-mode")
+;;(byte-compile-if-newer-and-load "$HOME/lisp-startup/graphviz-dot-mode")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/markdown-mode.el")
 
 (require 'package)
@@ -164,7 +164,7 @@
 ;(set-default-font "-adobe-courier-medium-r-normal--*-80-*-*-m-*-iso8859-1")
 
 (require 'toggle-source)
-(require 'csv-mode)
+;;(require 'csv-mode)
 
 (defalias 'convertquotes (read-kbd-macro
 "M-% C-q 223 RET `` RET ! C-u C-SPC M-% C-q 224 RET '' RET ! C-u C-SPC M-% C-q 221 RET ' RET ! C-u C-SPC M-% C-q 222 RET ' RET ! C-u C-SPC M-% C-q 226 RET -- RET ! C-u C-SPC M-% C-q 227 RET -- RET !"))
@@ -202,6 +202,7 @@
  'elpy-mode-hook
  '(lambda () (setq-local ac-max-width 0.5)))
 
+(setq visible-bell t)
 
 ; package-refresh-contents
 ; need to M-x package-install RET jedi RET
