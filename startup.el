@@ -14,10 +14,9 @@
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/matlab")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/outline-magic")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/doc-mode-1.1/doc-mode.el")
-(byte-compile-if-newer-and-load "$HOME/lisp-startup/csv-mode")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/org-outlook")
-(byte-compile-if-newer-and-load "$HOME/lisp-startup/graphviz-dot-mode")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/markdown-mode.el")
+(byte-compile-if-newer-and-load "$HOME/lisp-startup/tj3-mode.el")
 
 (require 'package)
 (add-to-list 'package-archives
@@ -114,6 +113,7 @@
 	    ("[Mm]akefile$" . makefile-mode)
 	    ("\\.emacs$"    . emacs-lisp-mode)
 	    ("\\.out$"    . outline-mode)
+	    ("\\.md$"    . markdown-mode)
 	     ) auto-mode-alist))
 
 ;; enable various minor modes on startup
@@ -164,7 +164,6 @@
 ;(set-default-font "-adobe-courier-medium-r-normal--*-80-*-*-m-*-iso8859-1")
 
 (require 'toggle-source)
-(require 'csv-mode)
 
 (defalias 'convertquotes (read-kbd-macro
 "M-% C-q 223 RET `` RET ! C-u C-SPC M-% C-q 224 RET '' RET ! C-u C-SPC M-% C-q 221 RET ' RET ! C-u C-SPC M-% C-q 222 RET ' RET ! C-u C-SPC M-% C-q 226 RET -- RET ! C-u C-SPC M-% C-q 227 RET -- RET !"))
@@ -202,8 +201,19 @@
  'elpy-mode-hook
  '(lambda () (setq-local ac-max-width 0.5)))
 
+(use-package flycheck
+  :ensure t
+  :config
+  
+(add-hook 'after-init-hook #'global-flycheck-mode)
+            ;; flycheck looks for libraries in load-path variable
+            (setq-default flycheck-emacs-lisp-load-path 'inherit)
+            (setq-default flycheck-flake8-maximum-line-length 99)
+)
 
 ; package-refresh-contents
 ; need to M-x package-install RET jedi RET
 ; and
 ; M-x package-install RET elpy RET
+
+(setq backup-by-copying 1)
