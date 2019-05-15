@@ -14,7 +14,8 @@
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/matlab")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/outline-magic")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/doc-mode-1.1/doc-mode.el")
-(byte-compile-if-newer-and-load "$HOME/lisp-startup/org-outlook")
+;;(byte-compile-if-newer-and-load "$HOME/lisp-startup/csv-mode")
+;;(byte-compile-if-newer-and-load "$HOME/lisp-startup/graphviz-dot-mode")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/markdown-mode.el")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/tj3-mode.el")
 
@@ -28,7 +29,7 @@
 (setq-default ispell-program-name "aspell")
 
 
-(require 'org-outlook)
+;;(require 'org-outlook)
 
 (global-set-key "\C-cr"     'revert-buffer)
 
@@ -164,6 +165,7 @@
 ;(set-default-font "-adobe-courier-medium-r-normal--*-80-*-*-m-*-iso8859-1")
 
 (require 'toggle-source)
+;;(require 'csv-mode)
 
 (defalias 'convertquotes (read-kbd-macro
 "M-% C-q 223 RET `` RET ! C-u C-SPC M-% C-q 224 RET '' RET ! C-u C-SPC M-% C-q 221 RET ' RET ! C-u C-SPC M-% C-q 222 RET ' RET ! C-u C-SPC M-% C-q 226 RET -- RET ! C-u C-SPC M-% C-q 227 RET -- RET !"))
@@ -210,6 +212,8 @@
             (setq-default flycheck-emacs-lisp-load-path 'inherit)
             (setq-default flycheck-flake8-maximum-line-length 99)
 )
+
+(setq visible-bell t)
 
 ; package-refresh-contents
 ; need to M-x package-install RET jedi RET
