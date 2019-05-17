@@ -17,14 +17,15 @@
 ;;(byte-compile-if-newer-and-load "$HOME/lisp-startup/csv-mode")
 ;;(byte-compile-if-newer-and-load "$HOME/lisp-startup/graphviz-dot-mode")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/markdown-mode.el")
-(byte-compile-if-newer-and-load "$HOME/lisp-startup/tj3-mode.el")
+(byte-compile-if-newer-and-load "$HOME/lisp-startup/ox-taskjuggler.el")
 
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
+
 (package-initialize)
 
-
+(require 'ox-taskjuggler)
 
 (setq-default ispell-program-name "aspell")
 
@@ -203,9 +204,9 @@
  'elpy-mode-hook
  '(lambda () (setq-local ac-max-width 0.5)))
 
-(use-package flycheck
-  :ensure t
-  :config
+;;(use-package flycheck
+;;  :ensure t
+;;  :config
   
 (add-hook 'after-init-hook #'global-flycheck-mode)
             ;; flycheck looks for libraries in load-path variable
