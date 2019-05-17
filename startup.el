@@ -224,3 +224,14 @@
 ; M-x package-install RET elpy RET
 
 (setq backup-by-copying 1)
+
+(define-skeleton latex-insert-header
+  "Insert Latex Header"
+  ""
+  "\\documentclass[letterpaper]{article}\n"
+  "\\usepackage{graphicx}\n"
+  "\\usepackage[margin=1in]{geometry}\n\n"
+  "\\begin{document}\n\n"
+  "\\includegraphics{image}\n\n"
+  "\\end{document}\n"
+)
