@@ -126,7 +126,7 @@
 (defvar ruby-indent-level 2
   "*Indentation of ruby statements.")
 
-(eval-when-compile (require 'cl))
+(eval-when-compile (require 'cl-lib))
 (defun ruby-imenu-create-index ()
   (let ((index-alist '())
 	class-name class-begin method-name method-begin decl)

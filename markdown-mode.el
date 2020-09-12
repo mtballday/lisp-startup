@@ -724,7 +724,7 @@
 (require 'easymenu)
 (require 'outline)
 (require 'thingatpt)
-(eval-when-compile (require 'cl))
+(eval-when-compile (require 'cl-lib))
 
 
 ;;; Constants =================================================================

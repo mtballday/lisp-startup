@@ -100,7 +100,7 @@
 ;;>> Problem:  Tabs at beginning of lines
 
 
-(require 'cl) ;; when
+(require 'cl-lib) ;; when
 
 (require 'shrink-fit nil t) ;; (no error if not found): shrink-frame-to-fit
 
