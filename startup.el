@@ -19,6 +19,7 @@
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/markdown-mode.el")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/ox-taskjuggler.el")
 (byte-compile-if-newer-and-load "$HOME/lisp-startup/taskjuggler-mode.el")
+(byte-compile-if-newer-and-load "$HOME/lisp-startup/arduino-mode.el")
 
 (require 'package)
 (add-to-list 'package-archives
@@ -74,7 +75,7 @@
 (line-number-mode t)
 (display-time)
 (setq display-time-day-and-date t)
-(auto-save-mode t)
+;(auto-save-mode t)
 (setq-default fill-column 80)
 (setq next-line-add-newlines nil)
 
