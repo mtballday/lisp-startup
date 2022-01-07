@@ -194,10 +194,6 @@
 (global-font-lock-mode 1)
 (setq-default indent-tabs-mode nil)
 
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/"))
-
 (setq python-shell-interpreter "python3"
       python-shell-interpreter-args "-i")
 
